@@ -9,4 +9,10 @@ import { Option } from "src/app/models/option.model";
 export class SelectComponent {
   @Input() disabled: boolean;
   @Input() options: Option[] = [];
+  @Input() placeholder: string;
+  selectedOption: string = '';
+
+   onSelectionChange(): void {
+    console.log("Selected option:", this.selectedOption);
+   }
 }
