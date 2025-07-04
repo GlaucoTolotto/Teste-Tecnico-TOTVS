@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { IDataService } from "../interfaces/data.service.interface";
+import { IDataService } from "../interfaces/data-service.interface";
 import { Observable, of } from "rxjs";
-import { Option } from "../models/option.models";
+import { Option } from "../models/option.model";
 
 @Injectable()
 export class DataSevice implements IDataService {
