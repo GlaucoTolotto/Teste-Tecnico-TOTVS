@@ -31,9 +31,8 @@ select:disabled {
 }
 
 select.initial-state {
-  color: #b6bdbf;/* Cor do texto do select quando o placeholder está ativo */
+  color: #b6bdbf;
 }
-
 
 option {
     color: #1d2426;
@@ -41,13 +40,12 @@ option {
 
 
 option:checked {
-
-    color: #1d2426; /* Texto branco */
+    color: #1d2426;
 }
 
 
 select:not(.initial-state) {
-    color: #1d2426; /* Cor do texto do select quando uma opção normal está selecionada */
+    color: #1d2426;
 }
 
 select:focus {
@@ -56,4 +54,12 @@ select:focus {
     outline-width: 4px;
     outline-style: solid;
     outline-offset: 2px;
+}
+
+select:hover:not(:disabled) {
+  background-color: #f2eaf6;
+}
+
+select:disabled:hover {
+  background-color: #dadedf;
 }
