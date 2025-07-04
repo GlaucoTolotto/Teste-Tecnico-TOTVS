@@ -6,5 +6,5 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./select.component.css"],
 })
 export class SelectComponent {
-  @Input() disabled: boolean = false;
+  @Input() disabled: boolean;
 }
