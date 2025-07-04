@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Option } from "src/app/models/option.model";
 
 @Component({
   selector: "app-select",
@@ -7,4 +8,5 @@ import { Component, Input } from "@angular/core";
 })
 export class SelectComponent {
   @Input() disabled: boolean;
+  @Input() options: Option[] = [];
 }
