@@ -1,8 +1,26 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from "@angular/core";
+import { DataSevice } from "./service/data.service";
+import { Option } from "./models/option.model"
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "my-app",
+  templateUrl: "./app.component.html",
+  styleUrls: [
+    "./app.component.css",
+    "../../node_modules/@po-ui/style/css/po-theme-default.min.css",
+  ],
+  providers: [DataSevice],
 })
-export class AppComponent {}
+export class AppComponent {
+  options: Option[] = this.getOptions();
+
+  constructor(private service: DataSevice) {}
+
+  getOptions() {
+    let response = [];
+    this.service.getOptions().subscribe((res) => {
+     response = res;
+    });
+    return response
+  }
+}
