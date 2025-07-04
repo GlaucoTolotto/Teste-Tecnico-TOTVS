@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { DataSevice } from "./service/data.service";
-import { Option } from "./models/option.model"
+import { Option } from "./models/option.model";
 
 @Component({
   selector: "my-app",
@@ -13,14 +13,19 @@ import { Option } from "./models/option.model"
 })
 export class AppComponent {
   options: Option[] = this.getOptions();
+  habilitaComponenteSelect = false;
+  selectedOptionsGroup: string;
+  optionsGroup: string;
+  placeholder = "Selecione uma opção"
 
   constructor(private service: DataSevice) {}
 
   getOptions() {
     let response = [];
     this.service.getOptions().subscribe((res) => {
-     response = res;
+      response = res;
     });
-    return response
+    return response;
   }
+
 }

@@ -1,11 +1,17 @@
 <po-page-default p-title="PO UI">
   <div class="po-row">
-    <po-switch ()></po-switch>
+    <po-switch
+      p-label="Habilita as opções"
+      [(ngModel)]="habilitaComponenteSelect"
+    ></po-switch>
     <po-select
-      class="po-lg-4"
+      class="po-lg-2"
       name="select"
+      p-label=" "
       [p-options]="options"
+      [p-disabled]="!habilitaComponenteSelect"
+      [p-placeholder]="placeholder"
     ></po-select>
   </div>
+  <app-select></app-select>
 </po-page-default>
-

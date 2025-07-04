@@ -12,6 +12,7 @@ import { PoSyncModule } from "@po-ui/ng-sync";
 
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
+import { SelectComponent } from './components/select/select.component';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { HttpClientModule } from "@angular/common/http";
     PoStorageModule.forRoot(),
     PoSyncModule,
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, SelectComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
