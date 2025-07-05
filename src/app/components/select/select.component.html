@@ -1,5 +1,4 @@
 <div class="select-container">
-  <span [ngClass]="{ 'span-disabled': !disabled }" class="material-symbols-outlined"> stat_minus_1 </span>
   <select
     [ngClass]="{ 'initial-state': selectedOption === '' }"
     (change)="onSelectionChange()"
