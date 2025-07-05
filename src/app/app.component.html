@@ -13,10 +13,13 @@
       [p-placeholder]="placeholder"
     ></po-select>
   </div>
-  <app-select
-    class="po-lg-2"
-    [placeholder]="placeholder"
-    [disabled]="habilitaComponenteSelect"
-    [options]="options"
-  ></app-select>
+  <div class="po-row">
+    <app-switch [(ngModel)]="habilitaComponenteSelect"></app-switch>
+    <app-select
+      class="po-lg-2"
+      [placeholder]="placeholder"
+      [disabled]="habilitaComponenteSelect"
+      [options]="options"
+    ></app-select>
+  </div>
 </po-page-default>

@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #e0e0e0; /* Cor de fundo para "false" */
+  border-radius: 20px; /* Borda arredondada */
+  width: 3rem; /* Largura do toggle */
+  height: 1rem; /* Altura do toggle */
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-container.checked {
+  background-color: #bd94d1; /* Cor de fundo para "true" (roxo) */
+}
+
+.toggle-switch {
+  width: 1.45rem; /* Largura do círculo */
+  height: 1.45rem; /* Altura do círculo */
+  background-color: #ffffff; /* Cor do círculo */
+  border-radius: 50%; /* Faz o círculo */
+  border: 2px solid #4a5c60; /* Borda do círculo */
+  position: absolute;
+  inset: 0;
+  top: -0.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+  display: flex; /* Para centralizar o "check" se for adicionar */
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-container.checked .toggle-switch {
+  transform: translateX(25px); /* Move o círculo para a direita (true) */
+  background-color: #753399;
+  border: 2px solid #753399; /* Cor do círculo quando "true" */
+}
+.material-symbols-outlined{
+  color: #fff;
+  font-size: 14px;
+}
+
+.toggle-label {
+  margin-left: .3rem; /* Alinha o texto à direita */
+  margin-right: 10px; /* Espaçamento do texto */
+  color: #1d2426; /* Cor do texto "false" */
+  font-weight: normal;
+}
+
+.toggle-container.checked .toggle-label {
+  margin-left: 10px; /* Alinha o texto à esquerda */
+  margin-right: auto; /* Alinha o texto à direita (para o caso de mudar a ordem) */
+  color: #ffffff; /* Cor do texto "true" */
+}
+
+/* Adicionando o checkmark para o estado "true" */
+.toggle-container.checked .toggle-switch::after {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1; 
+}
+
