@@ -6,6 +6,7 @@
   flex-wrap: nowrap;
   width: 100%;
   height: 100%;
+   box-sizing: border-box;
 }
 
 .toggle-container {
@@ -51,10 +52,13 @@
 }
 
 .toggle-label {
-  margin-left: .3rem; /* Alinha o texto à direita */
-  margin-right: 10px; /* Espaçamento do texto */
+  /*margin-left: .3rem;  Alinha o texto à direita 
+  margin-right: 10px; Espaçamento do texto */
   color: #1d2426; /* Cor do texto "false" */
   font-weight: normal;
+  box-sizing: border-box;
+   width: 70px;
+   margin-left: .5em;
 }
 
 .toggle-container.checked .toggle-label {

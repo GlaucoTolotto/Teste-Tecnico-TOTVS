@@ -5,10 +5,7 @@ import { Option } from "./models/option.model";
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html",
-  styleUrls: [
-    "./app.component.css",
-    "../../node_modules/@po-ui/style/css/po-theme-default.min.css",
-  ],
+  styleUrls: ["./app.component.css"],
   providers: [DataSevice],
 })
 export class AppComponent {
@@ -16,7 +13,8 @@ export class AppComponent {
   habilitaComponenteSelect = false;
   selectedOptionsGroup: string;
   optionsGroup: string;
-  placeholder = "Selecione uma opção"
+  placeholder = "Selecione uma opção";
+  isCheckedCustom: boolean = false;
 
   constructor(private service: DataSevice) {}
 
@@ -27,5 +25,4 @@ export class AppComponent {
     });
     return response;
   }
-
 }

@@ -1,17 +1,17 @@
-<select
-  [ngClass]="{ 'initial-state': selectedOption === '' }"
-  (change)="onSelectionChange()"
-  [(ngModel)]="selectedOption"
-  [ariaPlaceholder]="'Teste'"
-  [disabled]="!disabled"
->
-  <option
-    value=""
-    *ngIf="placeholder"
-    disabled
-    selected
+<div class="select-container">
+  <span [ngClass]="{ 'span-disabled': !disabled }" class="material-symbols-outlined"> stat_minus_1 </span>
+  <select
+    [ngClass]="{ 'initial-state': selectedOption === '' }"
+    (change)="onSelectionChange()"
+    [(ngModel)]="selectedOption"
+    [ariaPlaceholder]="placeholder"
+    [disabled]="!disabled"
   >
-    {{ placeholder }}
-  </option>
-  <option *ngFor="let op of options" [value]="op.value">{{ op.label }}</option>
-</select>
+    <option value="" *ngIf="placeholder" disabled selected>
+      {{ placeholder }}
+    </option>
+    <option *ngFor="let op of options" [value]="op.value">
+      {{ op.label }}
+    </option>
+  </select>
+</div>
